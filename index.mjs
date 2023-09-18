@@ -1,5 +1,5 @@
-export default async function plugin() {
-  fastify.get('/plugin', async (request, reply) => {
+export default async function plugin(fastify, options) {
+  fastify.get('/', async function (request, reply) {
     return { key: 'value' };
   });
 }
